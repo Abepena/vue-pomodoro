@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Vue Pomodoro</title>
+        <!-- Materialize CSS-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Bubblegum+Sans" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+        <div id="app">
+            <!-- NAVBAR / LOGO-->
+            <nav class="grey darken-4">
+                <a href="#" class="brand-logo center">{{ title }}</a>
+            </nav>
+    
+            <!--Main Content-->
+            <div class="container main">
+                <div class="nav-buttons">
+                    <button @click="setType"class="btn" value='pomodoro'>Pomodoro</button>
+                    <button @click="setType" class="btn" value='short'>Short Break</button>
+                    <button @click="setType" class="btn" value='long'>Long Break</button>
+                </div>
+                <div id="timer" class=flex-center>
+                    <div >{{ timeString }}</div>
+                </div>
+                <div id="controls" class=flex-center>
+                    <button
+                    @click="start"
+                    v-show="!timerRunning"
+                    class="grey start btn control-btn">Start</button>
+                    <button
+                    @click="pause"
+                    v-show="timerRunning"
+                    class="grey btn pause control-btn">Pause</button>
+                    <button 
+                    @click="reset"
+                    v-show="extraButtons"
+                    class="grey btn reset control-btn">Reset</button>
+                </div>
+            </div>
+        </div>
+        
+
+        <!-- Materialize JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+        <script type="text/javascript" src="app.js"></script>
+    </body>
+
+</html>
+

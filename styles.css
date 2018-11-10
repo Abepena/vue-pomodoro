@@ -1,0 +1,25 @@
+.main{
+    padding-top: 50px;
+}
+.nav-buttons {
+    display: flex;
+    justify-content: space-around;
+}
+
+#timer {
+    font-size: 200px;
+    margin-bottom: 40px;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+}
+
+.control-btn{
+    margin: 5px;
+}
+
+.brand-logo {
+    font-family: 'Bubblegum Sans', cursive;
+}
